@@ -5,8 +5,13 @@
 <div class="contaner">
     <div class="row">
         <div class="col-md-4">
-            <form action="" method="post">
+            {% if pesan %}
+                <div class="alert alert-success">{{ pesan }}</div>
+            {% endif %}
             
+            <form action="/plus-barang/" method="post">
+                {% csrf_token %}
+
                 {{ form.as_p }}
             
                 <button class="btn btn-primary">plus brand</button>

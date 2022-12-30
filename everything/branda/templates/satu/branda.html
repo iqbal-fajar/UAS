@@ -1,10 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
-    {% for branda in barangs %}
-        <li>{{ branda.jenis_barang }}</li>
-    {% endfor %}
+    <center>
+        <h1>EVERYTHING STORE</h1>
+    </center>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>JENIS BARANG</th>
+                        <th>KONDISI</th>
+                        <th>JUMLAH</th>
+                        <th>UKURAN</th>
+                        <th>BRAND</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for branda in barangs %}
+                        <tr>
+                            <td><a href="{% url 'perbarui' branda.id %}">{{ branda.jenis_barang }}</a></td>
+                            <td>{{ branda.kondisi }}</td>
+                            <td>{{ branda.jumlah }}</td>
+                            <td>{{ branda.ukuran }}</td>
+                            <td>{{ branda.produk_id }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
         
     
 {% endblock %} 

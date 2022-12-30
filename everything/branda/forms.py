@@ -11,6 +11,6 @@ class FormBarang(ModelForm):
             'jenis_barang' : forms.TextInput({'class':'form-control'}),
             'kondisi' : forms.TextInput({'class':'form-control'}),
             'jumlah' : forms.NumberInput({'class':'form-control'}),
-            'ukuran' : forms.NumberInput({'class':'form-control'}),
+            'ukuran' : forms.TextInput({'class':'form-control'}),
             'produk_id' : forms.Select({'class':'form-control'}),
         }
